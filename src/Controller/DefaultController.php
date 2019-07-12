@@ -13,6 +13,12 @@ class DefaultController extends Controller
     public function indexAction()
     {
         return $this->render('default/index.html.twig');
+    }
 
+    /**
+     * @Route("/test/{slug}", name="test")
+     */
+    public function showAction($slug){
+        return $this->render('default/show.html.twig');
     }
 }
